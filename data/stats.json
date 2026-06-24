@@ -1,90 +1,38 @@
 {
-  "generated_at": "2026-06-24T20:35:47.069217Z",
+  "generated_at": "2026-06-24T20:46:51.753979Z",
   "source": "alerts.in.ua API (накопичувально) + історичний імпорт",
   "note": "Тривалість — лише для тривог із зафіксованим завершенням. calculated_share — частка тривог із прогнозованим часом завершення (для громад буває висока, тож тривалість орієнтовна).",
   "regions": [
     {
-      "uid": 22,
-      "name": "Харківська область",
-      "oblast": "Харківська",
+      "uid": 9,
+      "name": "Дніпропетровська область",
+      "oblast": "Дніпропетровська",
       "level": "oblast",
-      "count": 325,
-      "total_hours": 455.6,
-      "avg_minutes": 84.1,
-      "calculated_share": 30,
+      "count": 2536,
+      "total_hours": 6329.9,
+      "avg_minutes": 149.8,
+      "calculated_share": 0,
       "by_month": {
-        "2026-02": {
-          "label": "Лютий",
-          "count": 58,
-          "hours": 81.0
-        },
-        "2026-03": {
-          "label": "Березень",
-          "count": 68,
-          "hours": 96.2
-        },
         "2026-04": {
           "label": "Квітень",
-          "count": 67,
-          "hours": 90.2
+          "count": 1,
+          "hours": 0.0
         },
         "2026-05": {
           "label": "Травень",
-          "count": 89,
-          "hours": 129.7
+          "count": 505,
+          "hours": 1464.4
         },
         "2026-06": {
           "label": "Червень",
-          "count": 43,
-          "hours": 58.5
+          "count": 2030,
+          "hours": 4865.5
         }
       },
       "by_type": {
-        "Повітряна тривога": 200,
-        "Артобстріл": 65,
-        "Вуличні бої": 60
-      }
-    },
-    {
-      "uid": 20,
-      "name": "Сумська область",
-      "oblast": "Сумська",
-      "level": "oblast",
-      "count": 338,
-      "total_hours": 439.6,
-      "avg_minutes": 78.0,
-      "calculated_share": 30,
-      "by_month": {
-        "2026-02": {
-          "label": "Лютий",
-          "count": 68,
-          "hours": 84.9
-        },
-        "2026-03": {
-          "label": "Березень",
-          "count": 70,
-          "hours": 93.0
-        },
-        "2026-04": {
-          "label": "Квітень",
-          "count": 60,
-          "hours": 83.0
-        },
-        "2026-05": {
-          "label": "Травень",
-          "count": 71,
-          "hours": 90.5
-        },
-        "2026-06": {
-          "label": "Червень",
-          "count": 69,
-          "hours": 88.2
-        }
-      },
-      "by_type": {
-        "Артобстріл": 63,
-        "Вуличні бої": 65,
-        "Повітряна тривога": 210
+        "Повітряна тривога": 2277,
+        "Артобстріл": 257,
+        "Ядерна загроза": 2
       }
     },
     {
@@ -92,41 +40,24 @@
       "name": "Донецька область",
       "oblast": "Донецька",
       "level": "oblast",
-      "count": 281,
-      "total_hours": 367.6,
-      "avg_minutes": 78.5,
-      "calculated_share": 29,
+      "count": 700,
+      "total_hours": 5542.3,
+      "avg_minutes": 475.1,
+      "calculated_share": 0,
       "by_month": {
-        "2026-02": {
-          "label": "Лютий",
-          "count": 40,
-          "hours": 51.3
-        },
-        "2026-03": {
-          "label": "Березень",
-          "count": 81,
-          "hours": 105.1
-        },
-        "2026-04": {
-          "label": "Квітень",
-          "count": 48,
-          "hours": 69.4
-        },
         "2026-05": {
           "label": "Травень",
-          "count": 47,
-          "hours": 52.9
+          "count": 200,
+          "hours": 1326.0
         },
         "2026-06": {
           "label": "Червень",
-          "count": 65,
-          "hours": 88.9
+          "count": 500,
+          "hours": 4216.3
         }
       },
       "by_type": {
-        "Вуличні бої": 52,
-        "Повітряна тривога": 177,
-        "Артобстріл": 52
+        "Повітряна тривога": 700
       }
     },
     {
@@ -134,123 +65,86 @@
       "name": "Запорізька область",
       "oblast": "Запорізька",
       "level": "oblast",
-      "count": 255,
-      "total_hours": 365.7,
-      "avg_minutes": 86.0,
-      "calculated_share": 29,
+      "count": 1124,
+      "total_hours": 4237.9,
+      "avg_minutes": 226.2,
+      "calculated_share": 0,
       "by_month": {
-        "2026-02": {
-          "label": "Лютий",
-          "count": 67,
-          "hours": 97.5
-        },
-        "2026-03": {
-          "label": "Березень",
-          "count": 59,
-          "hours": 86.5
-        },
-        "2026-04": {
-          "label": "Квітень",
-          "count": 45,
-          "hours": 64.8
-        },
         "2026-05": {
           "label": "Травень",
-          "count": 47,
-          "hours": 67.0
+          "count": 331,
+          "hours": 838.6
         },
         "2026-06": {
           "label": "Червень",
-          "count": 37,
-          "hours": 49.9
+          "count": 793,
+          "hours": 3399.3
         }
       },
       "by_type": {
-        "Артобстріл": 56,
-        "Повітряна тривога": 158,
-        "Вуличні бої": 41
+        "Повітряна тривога": 1124
       }
     },
     {
-      "uid": 23,
-      "name": "Херсонська область",
-      "oblast": "Херсонська",
+      "uid": 22,
+      "name": "Харківська область",
+      "oblast": "Харківська",
       "level": "oblast",
-      "count": 189,
-      "total_hours": 255.9,
-      "avg_minutes": 81.3,
-      "calculated_share": 29,
+      "count": 2237,
+      "total_hours": 3375.8,
+      "avg_minutes": 90.5,
+      "calculated_share": 0,
       "by_month": {
-        "2026-02": {
-          "label": "Лютий",
-          "count": 37,
-          "hours": 51.8
+        "2024-05": {
+          "label": "Травень",
+          "count": 2,
+          "hours": 0.0
         },
         "2026-03": {
           "label": "Березень",
-          "count": 36,
-          "hours": 46.3
-        },
-        "2026-04": {
-          "label": "Квітень",
-          "count": 33,
-          "hours": 42.3
+          "count": 1,
+          "hours": 0.0
         },
         "2026-05": {
           "label": "Травень",
-          "count": 42,
-          "hours": 63.3
+          "count": 521,
+          "hours": 686.9
         },
         "2026-06": {
           "label": "Червень",
-          "count": 41,
-          "hours": 52.2
+          "count": 1713,
+          "hours": 2688.9
         }
       },
       "by_type": {
-        "Повітряна тривога": 96,
-        "Вуличні бої": 58,
-        "Артобстріл": 35
+        "Повітряна тривога": 2235,
+        "Вуличні бої": 1,
+        "Артобстріл": 1
       }
     },
     {
-      "uid": 9,
-      "name": "Дніпропетровська область",
-      "oblast": "Дніпропетровська",
+      "uid": 20,
+      "name": "Сумська область",
+      "oblast": "Сумська",
       "level": "oblast",
-      "count": 191,
-      "total_hours": 245.8,
-      "avg_minutes": 77.2,
-      "calculated_share": 27,
+      "count": 953,
+      "total_hours": 1955.7,
+      "avg_minutes": 123.1,
+      "calculated_share": 0,
       "by_month": {
-        "2026-02": {
-          "label": "Лютий",
-          "count": 31,
-          "hours": 41.0
-        },
-        "2026-03": {
-          "label": "Березень",
-          "count": 42,
-          "hours": 53.1
-        },
-        "2026-04": {
-          "label": "Квітень",
-          "count": 31,
-          "hours": 41.9
-        },
         "2026-05": {
           "label": "Травень",
-          "count": 49,
-          "hours": 63.2
+          "count": 249,
+          "hours": 465.1
         },
         "2026-06": {
           "label": "Червень",
-          "count": 38,
-          "hours": 46.5
+          "count": 704,
+          "hours": 1490.6
         }
       },
       "by_type": {
-        "Повітряна тривога": 191
+        "Повітряна тривога": 953
       }
     },
     {
@@ -258,79 +152,24 @@
       "name": "Чернігівська область",
       "oblast": "Чернігівська",
       "level": "oblast",
-      "count": 173,
-      "total_hours": 243.5,
-      "avg_minutes": 84.4,
-      "calculated_share": 27,
+      "count": 678,
+      "total_hours": 1721.6,
+      "avg_minutes": 152.4,
+      "calculated_share": 0,
       "by_month": {
-        "2026-02": {
-          "label": "Лютий",
-          "count": 29,
-          "hours": 36.8
-        },
-        "2026-03": {
-          "label": "Березень",
-          "count": 48,
-          "hours": 67.8
-        },
-        "2026-04": {
-          "label": "Квітень",
-          "count": 32,
-          "hours": 47.6
-        },
         "2026-05": {
           "label": "Травень",
-          "count": 22,
-          "hours": 29.8
+          "count": 186,
+          "hours": 492.8
         },
         "2026-06": {
           "label": "Червень",
-          "count": 42,
-          "hours": 61.5
+          "count": 492,
+          "hours": 1228.8
         }
       },
       "by_type": {
-        "Повітряна тривога": 173
-      }
-    },
-    {
-      "uid": 17,
-      "name": "Миколаївська область",
-      "oblast": "Миколаївська",
-      "level": "oblast",
-      "count": 165,
-      "total_hours": 222.9,
-      "avg_minutes": 81.1,
-      "calculated_share": 30,
-      "by_month": {
-        "2026-02": {
-          "label": "Лютий",
-          "count": 39,
-          "hours": 53.3
-        },
-        "2026-03": {
-          "label": "Березень",
-          "count": 39,
-          "hours": 51.3
-        },
-        "2026-04": {
-          "label": "Квітень",
-          "count": 30,
-          "hours": 39.7
-        },
-        "2026-05": {
-          "label": "Травень",
-          "count": 31,
-          "hours": 44.1
-        },
-        "2026-06": {
-          "label": "Червень",
-          "count": 26,
-          "hours": 34.5
-        }
-      },
-      "by_type": {
-        "Повітряна тривога": 165
+        "Повітряна тривога": 678
       }
     },
     {
@@ -338,39 +177,24 @@
       "name": "Київська область",
       "oblast": "Київська",
       "level": "oblast",
-      "count": 117,
-      "total_hours": 163.5,
-      "avg_minutes": 83.8,
-      "calculated_share": 28,
+      "count": 429,
+      "total_hours": 442.3,
+      "avg_minutes": 61.9,
+      "calculated_share": 0,
       "by_month": {
-        "2026-02": {
-          "label": "Лютий",
-          "count": 18,
-          "hours": 26.2
-        },
-        "2026-03": {
-          "label": "Березень",
-          "count": 21,
-          "hours": 26.9
-        },
-        "2026-04": {
-          "label": "Квітень",
-          "count": 23,
-          "hours": 31.1
-        },
         "2026-05": {
           "label": "Травень",
-          "count": 26,
-          "hours": 37.3
+          "count": 134,
+          "hours": 129.2
         },
         "2026-06": {
           "label": "Червень",
-          "count": 29,
-          "hours": 42.0
+          "count": 295,
+          "hours": 313.1
         }
       },
       "by_type": {
-        "Повітряна тривога": 117
+        "Повітряна тривога": 429
       }
     },
     {
@@ -378,39 +202,74 @@
       "name": "Одеська область",
       "oblast": "Одеська",
       "level": "oblast",
-      "count": 110,
-      "total_hours": 142.9,
-      "avg_minutes": 77.9,
-      "calculated_share": 32,
+      "count": 611,
+      "total_hours": 368.2,
+      "avg_minutes": 36.2,
+      "calculated_share": 0,
       "by_month": {
-        "2026-02": {
-          "label": "Лютий",
-          "count": 19,
-          "hours": 29.9
-        },
-        "2026-03": {
-          "label": "Березень",
-          "count": 16,
-          "hours": 14.0
-        },
-        "2026-04": {
-          "label": "Квітень",
-          "count": 24,
-          "hours": 29.9
-        },
         "2026-05": {
           "label": "Травень",
-          "count": 35,
-          "hours": 48.3
+          "count": 101,
+          "hours": 78.1
         },
         "2026-06": {
           "label": "Червень",
-          "count": 16,
-          "hours": 20.9
+          "count": 510,
+          "hours": 290.1
         }
       },
       "by_type": {
-        "Повітряна тривога": 110
+        "Повітряна тривога": 611
+      }
+    },
+    {
+      "uid": 23,
+      "name": "Херсонська область",
+      "oblast": "Херсонська",
+      "level": "oblast",
+      "count": 414,
+      "total_hours": 323.1,
+      "avg_minutes": 46.8,
+      "calculated_share": 0,
+      "by_month": {
+        "2026-05": {
+          "label": "Травень",
+          "count": 97,
+          "hours": 71.6
+        },
+        "2026-06": {
+          "label": "Червень",
+          "count": 317,
+          "hours": 251.5
+        }
+      },
+      "by_type": {
+        "Повітряна тривога": 414
+      }
+    },
+    {
+      "uid": 17,
+      "name": "Миколаївська область",
+      "oblast": "Миколаївська",
+      "level": "oblast",
+      "count": 374,
+      "total_hours": 249.7,
+      "avg_minutes": 40.1,
+      "calculated_share": 0,
+      "by_month": {
+        "2026-05": {
+          "label": "Травень",
+          "count": 68,
+          "hours": 43.8
+        },
+        "2026-06": {
+          "label": "Червень",
+          "count": 306,
+          "hours": 205.9
+        }
+      },
+      "by_type": {
+        "Повітряна тривога": 374
       }
     }
   ]
