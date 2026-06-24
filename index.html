@@ -94,7 +94,7 @@
   </div>
 
   <footer>
-    <div id="f-note">Тривалість — лише для тривог із зафіксованим завершенням. «Прогноз. час» — частка тривог із оцінним часом відбою; для громад буває високою, тож години орієнтовні.</div>
+    <div id="f-note">Тривалість — лише для тривог із зафіксованим завершенням.</div>
     <div>Дані: alerts.in.ua API (накопичувально) + історичний імпорт. Лютий–квітень — з імпорту, бо API віддає лише останній місяць.</div>
   </footer>
 </div>
@@ -130,8 +130,7 @@ function showDetail(r){
   document.getElementById("d-cards").innerHTML=`
     <div class="card"><div class="k">Усього тривог</div><div class="v">${r.count}</div></div>
     <div class="card"><div class="k">Сумарно годин</div><div class="v">${r.total_hours.toFixed(0)}</div></div>
-    <div class="card"><div class="k">Середня, хв</div><div class="v">${r.avg_minutes.toFixed(0)}</div></div>
-    <div class="card"><div class="k">Прогноз. час</div><div class="v">${r.calculated_share}%</div></div>`;
+    <div class="card"><div class="k">Середня, хв</div><div class="v">${r.avg_minutes.toFixed(0)}</div></div>;
   // months
   document.getElementById("d-month-unit").textContent=unit();
   const mwrap=document.getElementById("d-months");mwrap.innerHTML="";
