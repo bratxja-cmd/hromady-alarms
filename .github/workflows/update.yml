@@ -1,0 +1,57 @@
+name: Оновлення тривог по громадах
+
+# Запускається 1-го числа щомісяця і вручну (кнопка Run workflow).
+on:
+  schedule:
+    - cron: "0 5 1 * *"   # 1-го числа кожного місяця о 05:00 UTC
+  workflow_dispatch: {}
+
+# Дозволи: писати в репозиторій (дані) і публікувати Pages (сайт).
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+# Щоб одночасно не запускалось двічі.
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  # КРОК 1: зібрати свіжі дані і закомітити їх у репозиторій
+  collect:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Зібрати та агрегувати
+        env:
+          ALERTS_TOKEN: ${{ secrets.ALERTS_TOKEN }}
+        run: |
+          python3 collect_hromady.py
+          python3 build_stats.py
+      - name: Закомітити оновлені дані
+        run: |
+          git config user.name "alerts-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add data/alerts.db data/stats.json
+          git commit -m "Оновлення даних $(date -u +%F)" || echo "без змін"
+          git push
+
+  # КРОК 2: опублікувати сайт із оновленими даними на GitHub Pages
+  deploy:
+    needs: collect
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: "."
+      - id: deployment
+        uses: actions/deploy-pages@v4
