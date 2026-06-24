@@ -43,15 +43,17 @@ HISTORY_DELAY_SEC = 31
 def init_db(con):
     con.execute("""
         CREATE TABLE IF NOT EXISTS alerts (
-            id            INTEGER PRIMARY KEY,   -- id тривоги з API (дедуплікація)
-            hromada_uid   INTEGER NOT NULL,
+            id            INTEGER NOT NULL,      -- id тривоги з API
+            hromada_uid   INTEGER NOT NULL,      -- uid локації (громади АБО району)
+            level         TEXT,                  -- 'hromada' або 'raion'
             hromada_name  TEXT NOT NULL,
             oblast        TEXT,
             alert_type    TEXT,
             started_at    TEXT,
             finished_at   TEXT,
             calculated    INTEGER,               -- 1 якщо час завершення прогнозований
-            source        TEXT DEFAULT 'api'     -- 'api' або 'import'
+            source        TEXT DEFAULT 'api',    -- 'api' або 'import'
+            PRIMARY KEY (id, hromada_uid)        -- та сама тривога може прийти і по громаді, і по району
         )
     """)
     con.commit()
@@ -93,11 +95,11 @@ def upsert_alerts(con, h, alerts):
         oblast = a.get("location_oblast") or h.get("oblast")
         cur = con.execute(
             """INSERT OR IGNORE INTO alerts
-               (id, hromada_uid, hromada_name, oblast, alert_type,
+               (id, hromada_uid, level, hromada_name, oblast, alert_type,
                 started_at, finished_at, calculated, source)
-               VALUES (?,?,?,?,?,?,?,?, 'api')""",
+               VALUES (?,?,?,?,?,?,?,?,?, 'api')""",
             (
-                a["id"], h["uid"], name, oblast,
+                a["id"], h["uid"], h.get("level"), name, oblast,
                 a.get("alert_type"), a.get("started_at"),
                 a.get("finished_at"),
                 1 if a.get("calculated") else 0,

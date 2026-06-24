@@ -60,12 +60,12 @@
 <body>
 <div class="wrap">
   <header>
-    <div class="eyebrow">Повітряні тривоги · громади · лютий–червень 2026</div>
-    <h1>Що пережили <em>ваші громади</em></h1>
+    <div class="eyebrow">Повітряні тривоги · області · останній місяць</div>
+    <h1>Що пережили <em>ваші області</em></h1>
     <div class="meta">
       <span id="m-src">джерело: —</span>
       <span id="m-upd">оновлено: —</span>
-      <span id="m-cnt">громад: —</span>
+      <span id="m-cnt">областей: —</span>
     </div>
   </header>
 
@@ -74,7 +74,7 @@
     <button id="t-cnt" onclick="setMetric('cnt')">Кількість тривог</button>
   </div>
 
-  <div class="panel-title"><span>Рейтинг громад · натисніть для деталей</span><span id="rank-unit">години</span></div>
+  <div class="panel-title"><span>Рейтинг областей · натисніть для деталей</span><span id="rank-unit">години</span></div>
   <div class="bars" id="bars"></div>
 
   <div class="detail" id="detail" style="display:none">
@@ -166,11 +166,12 @@ function setMetric(m){METRIC=m;
   document.getElementById("t-cnt").classList.toggle("active",m==="cnt");
   render();}
 
+
 fetch("data/stats.json").then(r=>r.json()).then(d=>{
   DATA=d;
   document.getElementById("m-src").textContent="джерело: "+d.source;
   document.getElementById("m-upd").textContent="оновлено: "+new Date(d.generated_at).toLocaleDateString("uk");
-  document.getElementById("m-cnt").textContent="громад: "+d.regions.length;
+  document.getElementById("m-cnt").textContent="областей: "+d.regions.length;
   render();
 }).catch(()=>{document.getElementById("bars").innerHTML=
   "<div style='color:var(--accent)'>Не вдалося завантажити data/stats.json. Запустіть через локальний сервер (див. README) і збудуйте дані: collect_hromady.py → build_stats.py.</div>";});

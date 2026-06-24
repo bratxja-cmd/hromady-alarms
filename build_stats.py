@@ -43,6 +43,7 @@ def main():
     # uid -> агрегати
     agg = {h["uid"]: {
         "uid": h["uid"], "name": h["name"], "oblast": h["oblast"],
+        "level": h.get("level", "hromada"),
         "count": 0, "total_minutes": 0.0,
         "by_month": defaultdict(lambda: {"count": 0, "minutes": 0.0}),
         "by_type": defaultdict(int),
@@ -82,6 +83,7 @@ def main():
         types = {ALERT_TYPES.get(k, k): v for k, v in a["by_type"].items()}
         regions.append({
             "uid": uid, "name": a["name"], "oblast": a["oblast"],
+            "level": a["level"],
             "count": a["count"],
             "total_hours": round(a["total_minutes"] / 60.0, 1),
             "avg_minutes": round(a["total_minutes"] / a["count"], 1) if a["count"] else 0,
