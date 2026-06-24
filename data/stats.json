@@ -1,0 +1,227 @@
+{
+  "generated_at": "2026-06-24T20:11:24.911897Z",
+  "source": "alerts.in.ua API (накопичувально) + історичний імпорт",
+  "note": "Тривалість — лише для тривог із зафіксованим завершенням. calculated_share — частка тривог із прогнозованим часом завершення (для громад буває висока, тож тривалість орієнтовна).",
+  "regions": [
+    {
+      "uid": 295,
+      "name": "Верхньодніпровська громада",
+      "oblast": "Дніпропетровська",
+      "count": 0,
+      "total_hours": 0.0,
+      "avg_minutes": 0,
+      "calculated_share": 0,
+      "by_month": {},
+      "by_type": {}
+    },
+    {
+      "uid": 349,
+      "name": "Марганецька громада",
+      "oblast": "Дніпропетровська",
+      "count": 0,
+      "total_hours": 0.0,
+      "avg_minutes": 0,
+      "calculated_share": 0,
+      "by_month": {},
+      "by_type": {}
+    },
+    {
+      "uid": 562,
+      "name": "Вільнянська громада",
+      "oblast": "Запорізька",
+      "count": 0,
+      "total_hours": 0.0,
+      "avg_minutes": 0,
+      "calculated_share": 0,
+      "by_month": {},
+      "by_type": {}
+    },
+    {
+      "uid": 577,
+      "name": "Широківська громада",
+      "oblast": "Запорізька",
+      "count": 0,
+      "total_hours": 0.0,
+      "avg_minutes": 0,
+      "calculated_share": 0,
+      "by_month": {},
+      "by_type": {}
+    },
+    {
+      "uid": 1033,
+      "name": "Роздільнянська громада",
+      "oblast": "Одеська",
+      "count": 0,
+      "total_hours": 0.0,
+      "avg_minutes": 0,
+      "calculated_share": 0,
+      "by_month": {},
+      "by_type": {}
+    },
+    {
+      "uid": 1026,
+      "name": "Шабівська громада",
+      "oblast": "Одеська",
+      "count": 0,
+      "total_hours": 0.0,
+      "avg_minutes": 0,
+      "calculated_share": 0,
+      "by_month": {},
+      "by_type": {}
+    },
+    {
+      "uid": 1580,
+      "name": "Кіптівська громада",
+      "oblast": "Чернігівська",
+      "count": 0,
+      "total_hours": 0.0,
+      "avg_minutes": 0,
+      "calculated_share": 0,
+      "by_month": {},
+      "by_type": {}
+    },
+    {
+      "uid": 379,
+      "name": "Олександрівська громада",
+      "oblast": "Донецька",
+      "count": 0,
+      "total_hours": 0.0,
+      "avg_minutes": 0,
+      "calculated_share": 0,
+      "by_month": {},
+      "by_type": {}
+    },
+    {
+      "uid": 908,
+      "name": "Березнегуватська громада",
+      "oblast": "Миколаївська",
+      "count": 0,
+      "total_hours": 0.0,
+      "avg_minutes": 0,
+      "calculated_share": 0,
+      "by_month": {},
+      "by_type": {}
+    },
+    {
+      "uid": 922,
+      "name": "Галицинівська громада",
+      "oblast": "Миколаївська",
+      "count": 0,
+      "total_hours": 0.0,
+      "avg_minutes": 0,
+      "calculated_share": 0,
+      "by_month": {},
+      "by_type": {}
+    },
+    {
+      "uid": 1345,
+      "name": "Великоолександрівська громада",
+      "oblast": "Херсонська",
+      "count": 0,
+      "total_hours": 0.0,
+      "avg_minutes": 0,
+      "calculated_share": 0,
+      "by_month": {},
+      "by_type": {}
+    },
+    {
+      "uid": 1582,
+      "name": "Куликівська громада",
+      "oblast": "Чернігівська",
+      "count": 0,
+      "total_hours": 0.0,
+      "avg_minutes": 0,
+      "calculated_share": 0,
+      "by_month": {},
+      "by_type": {}
+    },
+    {
+      "uid": 1350,
+      "name": "Нововоронцовська громада",
+      "oblast": "Херсонська",
+      "count": 0,
+      "total_hours": 0.0,
+      "avg_minutes": 0,
+      "calculated_share": 0,
+      "by_month": {},
+      "by_type": {}
+    },
+    {
+      "uid": 750,
+      "name": "Славутицька громада",
+      "oblast": "Київська",
+      "count": 0,
+      "total_hours": 0.0,
+      "avg_minutes": 0,
+      "calculated_share": 0,
+      "by_month": {},
+      "by_type": {}
+    },
+    {
+      "uid": 1206,
+      "name": "Тростянецька громада",
+      "oblast": "Сумська",
+      "count": 0,
+      "total_hours": 0.0,
+      "avg_minutes": 0,
+      "calculated_share": 0,
+      "by_month": {},
+      "by_type": {}
+    },
+    {
+      "uid": 1304,
+      "name": "Краснокутська громада",
+      "oblast": "Харківська",
+      "count": 0,
+      "total_hours": 0.0,
+      "avg_minutes": 0,
+      "calculated_share": 0,
+      "by_month": {},
+      "by_type": {}
+    },
+    {
+      "uid": 1321,
+      "name": "Чугуївська громада",
+      "oblast": "Харківська",
+      "count": 0,
+      "total_hours": 0.0,
+      "avg_minutes": 0,
+      "calculated_share": 0,
+      "by_month": {},
+      "by_type": {}
+    },
+    {
+      "uid": 1604,
+      "name": "Новгород-Сіверська громада",
+      "oblast": "Чернігівська",
+      "count": 0,
+      "total_hours": 0.0,
+      "avg_minutes": 0,
+      "calculated_share": 0,
+      "by_month": {},
+      "by_type": {}
+    },
+    {
+      "uid": 1198,
+      "name": "Шосткинська громада",
+      "oblast": "Сумська",
+      "count": 0,
+      "total_hours": 0.0,
+      "avg_minutes": 0,
+      "calculated_share": 0,
+      "by_month": {},
+      "by_type": {}
+    },
+    {
+      "uid": 1294,
+      "name": "Циркунівська громада",
+      "oblast": "Харківська",
+      "count": 0,
+      "total_hours": 0.0,
+      "avg_minutes": 0,
+      "calculated_share": 0,
+      "by_month": {},
+      "by_type": {}
+    }
+  ]
+}
