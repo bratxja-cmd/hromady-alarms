@@ -25,10 +25,17 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Зібрати та агрегувати
+- name: Зібрати та агрегувати
         env:
           ALERTS_TOKEN: ${{ secrets.ALERTS_TOKEN }}
         run: |
+          echo "=== Поточна тека ==="
+          pwd
+          echo "=== Файли поряд ==="
+          ls -la
+          echo "=== Що Python бачить у конфігу ==="
+          python3 -c "from hromady_config import HROMADY; print('громад:', len(HROMADY)); print('перші uid:', [h['uid'] for h in HROMADY[:5]])"
+          echo "=== Запуск збору ==="
           python3 collect_hromady.py
           python3 build_stats.py
 
