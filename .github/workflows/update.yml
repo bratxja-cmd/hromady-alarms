@@ -1,7 +1,7 @@
 name: Оновлення тривог по громадах
 on:
   schedule:
-    - cron: "0 5 1 * *"
+  - cron: "0 5 * * *"   # щодня о 05:00 UTC
   workflow_dispatch: {}
 permissions:
   contents: write
