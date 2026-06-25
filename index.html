@@ -130,7 +130,7 @@ function showDetail(r){
   document.getElementById("d-cards").innerHTML=`
     <div class="card"><div class="k">Усього тривог</div><div class="v">${r.count}</div></div>
     <div class="card"><div class="k">Сумарно годин</div><div class="v">${r.total_hours.toFixed(0)}</div></div>
-    <div class="card"><div class="k">Середня, хв</div><div class="v">${r.avg_minutes.toFixed(0)}</div></div>;
+    <div class="card"><div class="k">Середня, хв</div><div class="v">${r.avg_minutes.toFixed(0)}</div></div>`;
   // months
   document.getElementById("d-month-unit").textContent=unit();
   const mwrap=document.getElementById("d-months");mwrap.innerHTML="";
