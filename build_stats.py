@@ -21,8 +21,9 @@ from hromady_config import HROMADY, ALERT_TYPES
 DB = Path(__file__).parent / "data" / "alerts.db"
 OUT = Path(__file__).parent / "data" / "stats.json"
 
-MONTHS_UA = {2: "Лютий", 3: "Березень", 4: "Квітень", 5: "Травень", 6: "Червень"}
-
+MONTHS_UA = {1: "Січень", 2: "Лютий", 3: "Березень", 4: "Квітень",
+             5: "Травень", 6: "Червень", 7: "Липень", 8: "Серпень",
+             9: "Вересень", 10: "Жовтень", 11: "Листопад", 12: "Грудень"}
 
 def parse_dt(s):
     if not s:
