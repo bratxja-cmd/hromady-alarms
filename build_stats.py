@@ -21,9 +21,8 @@ from hromady_config import HROMADY, ALERT_TYPES
 DB = Path(__file__).parent / "data" / "alerts.db"
 OUT = Path(__file__).parent / "data" / "stats.json"
 
-MONTHS_UA = {1: "Січень", 2: "Лютий", 3: "Березень", 4: "Квітень",
-             5: "Травень", 6: "Червень", 7: "Липень", 8: "Серпень",
-             9: "Вересень", 10: "Жовтень", 11: "Листопад", 12: "Грудень"}
+MONTHS_UA = {2: "Лютий", 3: "Березень", 4: "Квітень", 5: "Травень", 6: "Червень"}
+
 
 def parse_dt(s):
     if not s:
@@ -52,6 +51,7 @@ def main():
     } for h in HROMADY}
 
     calc_counts = defaultdict(int)
+    CUTOFF = dt.datetime(2026, 2, 1)  # відсікаємо артефакти, старіші за лютий 2026
     for r in rows:
         uid = r["hromada_uid"]
         if uid not in agg:
@@ -59,6 +59,9 @@ def main():
         a = agg[uid]
         s = parse_dt(r["started_at"])
         f = parse_dt(r["finished_at"])
+        # пропускаємо тривоги поза розумним періодом (сміттєві/тестові записи)
+        if s and s < CUTOFF:
+            continue
         a["count"] += 1
         a["by_type"][r["alert_type"] or "unknown"] += 1
         if r["calculated"]:
