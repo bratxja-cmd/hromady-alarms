@@ -43,17 +43,20 @@ HISTORY_DELAY_SEC = 31
 def init_db(con):
     con.execute("""
         CREATE TABLE IF NOT EXISTS alerts (
-            id            INTEGER NOT NULL,      -- id тривоги з API
-            hromada_uid   INTEGER NOT NULL,      -- uid локації (громади АБО району)
-            level         TEXT,                  -- 'hromada' або 'raion'
+            id            INTEGER,               -- id тривоги з API (не унікальний між запусками)
+            hromada_uid   INTEGER NOT NULL,      -- uid локації
+            level         TEXT,
             hromada_name  TEXT NOT NULL,
             oblast        TEXT,
             alert_type    TEXT,
-            started_at    TEXT,
+            started_at    TEXT NOT NULL,
             finished_at   TEXT,
-            calculated    INTEGER,               -- 1 якщо час завершення прогнозований
-            source        TEXT DEFAULT 'api',    -- 'api' або 'import'
-            PRIMARY KEY (id, hromada_uid)        -- та сама тривога може прийти і по громаді, і по району
+            calculated    INTEGER,
+            source        TEXT DEFAULT 'api',
+            -- Дедуплікація ЗА ЗМІСТОМ: одна локація не може мати дві різні
+            -- тривоги з тим самим часом початку. Це відсікає дублі, які API
+            -- віддає з різними id при щоденному перекритті вікон.
+            PRIMARY KEY (hromada_uid, started_at)
         )
     """)
     con.commit()
@@ -89,8 +92,11 @@ def upsert_alerts(con, h, alerts):
     """
     added = 0
     for a in alerts:
-        if not isinstance(a, dict) or "id" not in a:
+        if not isinstance(a, dict):
             continue
+        started = a.get("started_at")
+        if not started:
+            continue  # без часу початку не можемо дедуплікувати — пропускаємо
         name = a.get("location_title") or h["name"]
         oblast = a.get("location_oblast") or h.get("oblast")
         cur = con.execute(
@@ -99,8 +105,8 @@ def upsert_alerts(con, h, alerts):
                 started_at, finished_at, calculated, source)
                VALUES (?,?,?,?,?,?,?,?,?, 'api')""",
             (
-                a["id"], h["uid"], h.get("level"), name, oblast,
-                a.get("alert_type"), a.get("started_at"),
+                a.get("id"), h["uid"], h.get("level"), name, oblast,
+                a.get("alert_type"), started,
                 a.get("finished_at"),
                 1 if a.get("calculated") else 0,
             ),
